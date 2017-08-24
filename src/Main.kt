@@ -9,14 +9,25 @@ fun main(args: Array<String>) {
     val double2 = 123.5e10
     val double3: Double = 1.5
 
+    println(message = "double1 is Double? ${double1 is Double}" )
+    println(message = "double2 is Double? ${double2 is Double}" )
+    println(message = "double3 is Double? ${double3 is Double}" )
+
     // Float (32)
     val float1 = 1.5F
     val float2 = 123.5e10f
     val float3: Float = 1.5f
 
+    println(message = "float1 is Float? ${float1 is Float}" )
+    println(message = "float3 is Float? ${float2 is Float}" )
+    println(message = "float3 is Float? ${float3 is Float}" )
+
     // Long (65)
     val long1 = 1L
     val long2: Long = 15L
+
+    println(message = "long1 is Long? ${long1 is Long}" )
+    println(message = "long2 is Long? ${long2 is Long}" )
 
     // Int (32)
     val int1 = 1
@@ -24,11 +35,20 @@ fun main(args: Array<String>) {
     val int3: Int = 0x0F // Hexadecimals
     val int4: Int = 0b00001011 // Binaries
 
+    println(message = "int1 is Int? ${int1 is Int}" )
+    println(message = "int2 is Int? ${int2 is Int}" )
+    println(message = "int3 is Int? ${int3 is Int}" )
+    println(message = "int4 is Int? ${int4 is Int}" )
+
     // Short (16)
     val short1: Short = 1
 
+    println(message = "short1 is Short? ${short1 is Short}" )
+
     // Byte (8)
     val byte: Byte = 1
+
+    println(message = "byte is Byte? ${byte is Byte}" )
 
     // Underscores
     val oneMillion = 1_000_000
@@ -36,6 +56,12 @@ fun main(args: Array<String>) {
     val socialSecurityNumber = 999_99_9999L
     val hexBytes = 0xFF_EC_DE_5E
     val bytes = 0b11010010_01101001_10010100_10010010
+
+    println(oneMillion)
+    println(creditCardNumber)
+    println(socialSecurityNumber)
+    println(hexBytes)
+    println(bytes)
 
     val var1 = byte.toByte()
     val var2 = byte.toShort()
@@ -52,54 +78,25 @@ fun main(args: Array<String>) {
     val char2: Char = 'c'
     val unicode = '\u0000'
 
+    println("char1 is Char? ${char1 is Char}")
+    println("char2 is Char? ${char2 is Char}")
+    println("unicode is Char? ${unicode is Char}")
+
     // Buleanos
     val bool1 = true
     val bool2: Boolean = false
+
+    println("bool1 is Boolean? ${bool1 is Boolean}")
+    println("bool2 is Boolean? ${bool2 is Boolean}")
 
     // Strings
     val string1 = "String"
     val string2: String = "String"
 
-    /* Testes */
+    // Null Safe
+    val s: String? = null
 
-    println(message = "double1 is Double? ${double1 is Double}" )
-    println(message = "double2 is Double? ${double2 is Double}" )
-    println(message = "double3 is Double? ${double3 is Double}" )
-
-    println(message = "float1 is Float? ${float1 is Float}" )
-    println(message = "float3 is Float? ${float2 is Float}" )
-    println(message = "float3 is Float? ${float3 is Float}" )
-
-    println(message = "long1 is Long? ${long1 is Long}" )
-    println(message = "long2 is Long? ${long2 is Long}" )
-
-    println(message = "int1 is Int? ${int1 is Int}" )
-    println(message = "int2 is Int? ${int2 is Int}" )
-    println(message = "int3 is Int? ${int3 is Int}" )
-    println(message = "int4 is Int? ${int4 is Int}" )
-
-    println(message = "short1 is Short? ${short1 is Short}" )
-
-    println(message = "byte is Byte? ${byte is Byte}" )
-
-    println(oneMillion)
-    println(creditCardNumber)
-    println(socialSecurityNumber)
-    println(hexBytes)
-    println(bytes)
-
-
-    println("char1 is Char? ${char1 is Char}")
-    println("char2 is Char? ${char2 is Char}")
-    println("unicode is Char? ${unicode is Char}")
-
-
-    println("bool1 is Boolean? ${bool1 is Boolean}")
-    println("bool2 is Boolean? ${bool2 is Boolean}")
-
-
-
-
+    println("Null safe is ${s?.length}")
 
 
     val a: Int = 10000
