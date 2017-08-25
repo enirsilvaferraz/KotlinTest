@@ -82,12 +82,28 @@ fun main(args: Array<String>) {
     println("char2 is Char? ${char2 is Char}")
     println("unicode is Char? ${unicode is Char}")
 
+    println("\t \b \n \r \' \" \\ \$")
+
     // Buleanos
     val bool1 = true
     val bool2: Boolean = false
 
     println("bool1 is Boolean? ${bool1 is Boolean}")
     println("bool2 is Boolean? ${bool2 is Boolean}")
+
+
+    val array = arrayOf("SP", "RJ" )
+    val mix = arrayOf (1, "String", 3)
+    val ints = intArrayOf(1, 2, 3)
+    val bools = booleanArrayOf(true, false, false)
+    val nulls = arrayOfNulls<Int>(5)
+    val empty = emptyArray<Char>()
+    val asc = Array(5, { i -> (i * i).toString() })
+
+    for (item in asc) print("$item, ")
+
+    array[0] = "MG"
+
 
     // Strings
     val string1 = "String"
