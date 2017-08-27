@@ -15,12 +15,14 @@ fun main(args: Array<String>) {
 
     // Float (32)
     val float1 = 1.5F
-    val float2 = 123.5e10f
+    val float2 = 123.5e-10f
     val float3: Float = 1.5f
+    val float4 = 1e2f
 
     println(message = "float1 is Float? ${float1 is Float}" )
     println(message = "float3 is Float? ${float2 is Float}" )
     println(message = "float3 is Float? ${float3 is Float}" )
+    println(message = "float4 == 100 ${float4 == 100f}" )
 
     // Long (65)
     val long1 = 1L
@@ -93,10 +95,37 @@ fun main(args: Array<String>) {
     val string1 = "String"
     val string2: String = "String"
 
-    // Null Safe
-    val s: String? = null
+    val string3 = " String\nString " // Prints: String\nString
+    val string4 = """ String\nString """.trimMargin() // Prints: String\nString
 
-    println("Null safe is ${s?.length}")
+    val string5 = """
+        |Tell me and I forget.
+        |Teach me and I remember.
+        |Involve me and I learn.
+        |(Benjamin Franklin)
+        """.trimMargin()
+
+    println(string3)
+    println(string4)
+    println(string5)
+
+    val int = 10
+    val template = "int = $int" // evaluates to "int = 10"
+
+    println("template: $template")
+
+    val string6 = "abc"
+    println("$string6.length is ${string6.length}") // evaluates to "abc.length is 3"
+
+    val price1 = "R\$10,00"
+    val price2 = """${'$'}9.99"""
+
+    println(price1)
+    println(price2)
+
+
+
+
 
 
     val a: Int = 10000
